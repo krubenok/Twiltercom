@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/krubenok/Twiltercom#readme",
   "dependencies": {
+    "dotenv": "^8.1.0",
     "express": "^4.17.1",
     "twilio": "^3.35.0"
   }
