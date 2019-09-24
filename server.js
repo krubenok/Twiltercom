@@ -17,7 +17,7 @@ app.post("/voice", (request, response) => {
     /** helper function to set up a <Gather> */
     function gather() {
         gatherNode = twiml.gather({ numDigits: 4 });
-        gatherNode.say("Please enter your access code:");
+        gatherNode.say(precess.end.GREETING);
 
         // If the user doesn't enter input, loop
         twiml.redirect("/voice");
@@ -27,14 +27,15 @@ app.post("/voice", (request, response) => {
     if (request.body.Digits) {
         switch (request.body.Digits) {
             case process.env.ACCESS_CODE:
-                twiml.say("Code accepted! Welcome to La Terrasse.");
+                twiml.say(precess.end.ACCEPTED);
                 twiml.play({
-                    digits:'w999'
+                    // Plays DFTM tones passed in .env file. 
+                    digits: process.env.TONE
                 });
                 console.log(request.body.Digits);
                 break;
             default:
-                twiml.say("Sorry, that code was invalid, try again.").pause();
+                twiml.say(precess.end.REJECTED).pause();
                 gather();
                 break;
         }
