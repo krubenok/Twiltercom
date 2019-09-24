@@ -6,7 +6,7 @@
  It uses the Twilio programmable voice API's to handle an incoming call and create an IVR like call tree.
 
 ## Environment Variables
-See the `.env.example` file. Set these variables as you wish for your situation. 
+See the `.env.example` file. Copy this to a file named `.env` in the project root with the options set as you prefer or input them in Heroku's web console.
 
 ## Hosting
 This should be pretty easy to host in Heroku. TODO: make a deploy to Heroku button to make this really easy
