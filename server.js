@@ -55,7 +55,7 @@ if (process.env.DEPLOY_MODE == "DEV") {
     console.log("Twilio Client app HTTP server running at http://127.0.0.1:1337");
 }
 else if (process.env.DEPLOY_MODE == "PROD") {
-    app.listen(443);
+    app.listen(80);
     console.log("Twilio Client app HTTP server running at http://127.0.0.1:443");
 }
 else {
