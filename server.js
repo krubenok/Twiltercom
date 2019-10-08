@@ -50,14 +50,6 @@ app.post("/voice", (request, response) => {
 });
 
 // Create an HTTP server and listen for requests
-if (process.env.DEPLOY_MODE == "DEV") {
-    app.listen(1337);
-    console.log("Twilio Client app HTTP server running at http://127.0.0.1:1337");
-}
-else if (process.env.DEPLOY_MODE == "PROD") {
-    app.listen(80);
-    console.log("Twilio Client app HTTP server running at http://127.0.0.1:443");
-}
-else {
-    console.log("Error in .env file. Check DEPLOY_MODE.");
-}
+
+app.listen(1337);
+console.log("Twilio Client app HTTP server running at http://127.0.0.1:1337");
