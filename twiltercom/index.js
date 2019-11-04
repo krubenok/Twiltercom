@@ -7,8 +7,8 @@ module.exports = function(context, req) {
     const twiml = new VoiceResponse();
     const dial = twiml.dial();
     twiml.say("Hello");
-    dial.number({
-        sendDigits: "w999"
+    twiml.play({
+        digits: "w999"
     });
 
     context.res = {
