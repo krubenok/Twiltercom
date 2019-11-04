@@ -1,29 +1,12 @@
 {
-  "name": "twiltercom",
+  "name": "Twiltercom",
   "version": "1.0.0",
-  "description": "A twilio powered intercom bot",
-  "main": "server.js",
+  "description": "",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "test": "echo \"No tests yet...\""
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/krubenok/Twiltercom.git"
-  },
-  "keywords": [
-    "twilio"
-  ],
-  "author": "Kyle Rubenok",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/krubenok/Twiltercom/issues"
-  },
-  "homepage": "https://github.com/krubenok/Twiltercom#readme",
   "dependencies": {
-    "dotenv": "^8.1.0",
-    "express": "^4.17.1",
-    "jshint": "^2.10.2",
-    "twilio": "^3.35.0"
-  }
+    "twilio": "^3.36.0"
+  },
+  "devDependencies": {}
 }
