@@ -6,7 +6,7 @@
  It uses the Twilio programmable voice API's to handle an incoming call and dial 9.
 
 ## Hosting
-This is designed to be run as an Azure function.
+This is designed to be run as an Azure function. The Github Action `deploy.yml` should deploy any subsequent updates to the `master` branch automatically to Azure.
 
 ## Setup
 Once you have Twiltercom running somewhere, you'll need to point your twilio phone number's incoming voice to post to that endpoint. Note it needs to be HTTPS. You can do that at this link. https://www.twilio.com/console/voice/numbers
