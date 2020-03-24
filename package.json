@@ -6,6 +6,7 @@
     "test": "echo \"No tests yet...\""
   },
   "dependencies": {
+    "@slack/webhook": "^5.0.3",
     "twilio": "^3.36.0"
   },
   "devDependencies": {}
