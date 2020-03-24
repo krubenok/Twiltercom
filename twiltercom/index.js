@@ -1,8 +1,8 @@
+require("dotenv").config();
 const qs = require("querystring");
 const VoiceResponse = require("twilio").twiml.VoiceResponse;
-const { IncomingWebhook } = require("@slack/webhook");
-const url = process.env.SLACK_URL;
-const webhook = new IncomingWebhook(url);
+const webhook = require("discord-webhook-node");
+const hook = new webhook.Webhook(process.env.DISCORD_WEBHOOK);
 
 module.exports = function(context, req) {
     context.log("JavaScript HTTP trigger function processed a request.");
@@ -12,7 +12,6 @@ module.exports = function(context, req) {
     twiml.play({
         digits: "w999"
     });
-
     context.res = {
         status: 200,
         body: twiml.toString(),
@@ -20,11 +19,15 @@ module.exports = function(context, req) {
         isRaw: true
     };
 
-    context.done();
-
+    console.log("I'm here!");
     (async () => {
-        await webhook.send({
-            text: "Ding Dong! Someone just buzzed in."
-        });
+        try {
+            await hook.send("Ding Dong! Someone's at the door!");
+            console.log("Successfully sent webhook!");
+        } catch (e) {
+            console.log(e.message);
+        }
     })();
+
+    context.done();
 };

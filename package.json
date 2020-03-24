@@ -1,13 +1,14 @@
 {
-  "name": "Twiltercom",
-  "version": "1.0.0",
-  "description": "",
-  "scripts": {
-    "test": "echo \"No tests yet...\""
-  },
-  "dependencies": {
-    "@slack/webhook": "^5.0.3",
-    "twilio": "^3.36.0"
-  },
-  "devDependencies": {}
+    "name": "Twiltercom",
+    "version": "1.0.0",
+    "description": "",
+    "scripts": {
+        "test": "echo \"No tests yet...\""
+    },
+    "dependencies": {
+        "discord-webhook-node": "^1.0.6",
+        "dotenv": "^8.2.0",
+        "twilio": "^3.36.0"
+    },
+    "devDependencies": {}
 }
