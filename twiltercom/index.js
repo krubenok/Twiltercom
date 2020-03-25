@@ -1,4 +1,3 @@
-require("dotenv").config();
 const qs = require("querystring");
 const VoiceResponse = require("twilio").twiml.VoiceResponse;
 const webhook = require("discord-webhook-node");

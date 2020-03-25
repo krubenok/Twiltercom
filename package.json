@@ -7,7 +7,6 @@
     },
     "dependencies": {
         "discord-webhook-node": "^1.0.6",
-        "dotenv": "^8.2.0",
         "twilio": "^3.36.0"
     },
     "devDependencies": {}
