@@ -10,3 +10,6 @@ This is designed to be run as an Azure function. The Github Action `deploy.yml` 
 
 ## Setup
 Once you have Twiltercom running somewhere, you'll need to point your twilio phone number's incoming voice to post to that endpoint. Note it needs to be HTTPS. You can do that at this link. https://www.twilio.com/console/voice/numbers
+
+### Discord Webhook
+The application uses a Discord Webhook to send a notification every time your buzzer is opened with Twiltercom. Set a value in your `local.settings.json` for `"DISCORD_WEBHOOK"`. You can then push these settings up to your Azure Function instance. 
